@@ -1,26 +1,166 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* 🎨 Colors */
+    --primary-main: #49B73E;
+    --primary-light: #DBF1D8;
+    --secondary-main: #F1F1F1;
+    
+    --background: #FFFFFF;
+    --foreground: #0A0A0A;
+
+    
+    --text-main: #050505;
+    --text-secondary: #5E5E5E;
+
+    /* 🔤 Fonts */
+--font-primary: var(--font-satoshi);
+--font-secondary: var(--font-six-caps);
+
+
+    /* 📏 Spacing */
+    --S6: 6px;
+    --S8: 8px;
+    --S16: 16px;
+    --S24: 24px;
+    --S32: 32px;
+    --S40: 40px;
+    --S48: 48px;
+    --S56: 56px;
+    --S64: 64px;
+
+    --S80: 80px; 
+    --S104: 104px; 
+    --S160: 160px; 
+
+    /* 🧭 Radii */
+    --R8: 8px;
+    --R16: 16px;
+    --R24: 24px;
+    --R32: 32px;
+    --R40: 40px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+    --color-primary-main: var(--primary-main);
+    --color-primary-light: var(--primary-light);
+    --color-secondary-main: var(--secondary-main);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+   --color-main: var(--text-main);
+   --color-secondary: var(--text-secondary);
+
+    --font-primary: var(--font-primary);
+    --font-secondary: var(--font-secondary);
+
+    /* Spacing */
+    --spacing-s6: var(--S6);
+    --spacing-s8: var(--S8);
+    --spacing-s16: var(--S16);
+    --spacing-s24: var(--S24);
+    --spacing-s32: var(--S32);
+    --spacing-s40: var(--S40);
+    --spacing-s48: var(--S48);
+    --spacing-s56: var(--S56);
+    --spacing-s64: var(--S64);
+
+    --spacing-s80: var(--S80);
+    --spacing-s104: var(--S104);
+    --spacing-s160: var(--S160);
+
+    /* Radii */
+    --radius-r8: var(--R8);
+    --radius-r16: var(--R16);
+    --radius-r24: var(--R24);
+    --radius-r32: var(--R32);
+    --radius-r40: var(--R40);
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+/* 🧠 Typography */
+
+.heading-h1 {
+    @apply font-bold;
+    font-family: var(--font-primary);
+    font-size: clamp(2.75rem, 4vw + 1rem, 3.813rem);
+    /* 44px → 61px */
+    line-height: clamp(1.05, 1vw + 1, 1.15);
+}
+
+.heading-h2 {
+    @apply font-semibold;
+    font-family: var(--font-primary);
+    font-size: clamp(2.188rem, 4vw + 1rem, 3.063rem);
+    /* 35px → 49px */
+    line-height: clamp(1.1, 0.8vw + 1, 1.22);
+}
+
+.heading-h3 {
+    @apply font-medium;
+    font-family: var(--font-primary);
+    font-size: clamp(1.75rem, 2vw + 1rem, 2.438rem);
+    /* 28px → 39px */
+    line-height: clamp(1.1, 0.8vw + 1, 1.22);
+}
+
+.heading-h4 {
+    font-family: var(--font-primary);
+    @apply font-medium;
+    font-size: clamp(1.375rem, 2vw + 1rem, 1.938rem);
+    /* 22px → 31px */
+    line-height: clamp(1.15, 0.6vw + 1, 1.3);
+}
+
+.heading-h5 {
+    
+    @apply font-medium;
+    font-family: var(--font-primary);
+    font-size: clamp(1.125rem, 1vw + 1rem, 1.563rem);
+    /* 18px → 25px */
+    line-height: clamp(1.15, 0.6vw + 1, 1.3);
+}
+
+.heading-h6 {
+    @apply font-medium;
+    font-size: clamp(1rem, 0.4vw + 0.9rem, 1.25rem);
+    /* 16px → 20px */
+    line-height: clamp(1.25, 0.4vw + 1, 1.4);
+}
+
+.body-default {
+    @apply font-normal;
+    font-size: clamp(1rem, 1vw + 1rem, 1rem);
+    /* 16px → 16px */
+    line-height: 1.65;
+}
+
+.caption {
+    @apply font-normal;
+    font-size: clamp(0.75rem, 1vw + 1rem, 0.75rem);
+    /* 12px → 12px */
+    line-height: 1.5;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-primary);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    
+}
+
+/* hide scrollbar but allow scroll */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
 }
