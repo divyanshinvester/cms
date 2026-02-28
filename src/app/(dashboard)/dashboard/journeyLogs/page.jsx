@@ -81,15 +81,15 @@ useEffect(() => {
             <div
               key={log._id}
               className="
-                bg-background rounded-r24 p-s16 md:p-s24
+                bg-background rounded-r24 p-s8 sm:p-s16 md:p-s24
                 flex justify-between
-                gap-s16 md:gap-s24
+                gap-s16 md:gap-s24 max-w-[100%] overflow-hidden
               "
             >
              <div className="flex gap-s8 md:gap-s32 ">
                <img
                 src={thumbnail}
-                className="min-w-[200px] lg:min-w-[30vw] shrink-0 h-[100px] lg:h-[160px] rounded-r16 object-cover"
+                className="w-[160px] lg:min-w-[30vw] shrink-0 h-[100px] lg:h-[160px] rounded-r16 object-cover"
               />
 
                <div className="max-w-[30vw] md:max-w-[15vw] flex flex-col  lg:max-w-[25vw]">

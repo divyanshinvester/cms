@@ -33,4 +33,4 @@ const performanceTrackSchema = new mongoose.Schema(
     }
 )
 
-export default mongoose.models.Blog || mongoose.model("Performance", performanceTrackSchema);
+export default mongoose.models.Performance  || mongoose.model("Performance", performanceTrackSchema);
