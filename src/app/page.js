@@ -20,7 +20,7 @@ return (
           max-w-xs md:max-w-xl
           mx-auto
         ">
-          Manage blogs, videos, and uploads from one place.
+          Manage blogs and uploads from one place.
         </p>
       </div>
 
