@@ -10,7 +10,7 @@ export default function Page() {
   const { id } = useParams();
   const [status, setStatus] = useState("add");
 
-  const MAX_CHARS = 100;
+  const MAX_CHARS = 150;
 
   const {
     register,

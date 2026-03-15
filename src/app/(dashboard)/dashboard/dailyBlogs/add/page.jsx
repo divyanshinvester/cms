@@ -9,7 +9,7 @@ export default function Page() {
   const router = useRouter();
   const [status, setStatus] = useState("add"); 
   // add | adding | added
-const MAX_CHARS = 200;
+const MAX_CHARS = 150;
 const {
   register,
   handleSubmit,
